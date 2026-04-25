@@ -3,24 +3,20 @@ export async function GET() {
 Allow: /
 
 # Sitemap
-Sitemap: https://awsdevopstraininghyderabad.com/sitemap.xml
+Sitemap: https://www.awsdevopstraininginhyderabad.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
 
 # Disallow admin areas
 Disallow: /admin/
-Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
 
 # Allow important pages
 Allow: /courses/
-Allow: /about/
-Allow: /contact/
 
 # Host
-Host: https://awsdevopstraininghyderabad.com`;
+Host: https://www.awsdevopstraininginhyderabad.com`;
 
   return new Response(robotsTxt, {
     headers: {
