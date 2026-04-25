@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import EnrollmentModal from '@/components/EnrollmentModal';
 import CourseStructuredData from '@/components/CourseStructuredData';
 import { getCourseBySlug } from '@/lib/staticCourseData';
@@ -54,7 +55,7 @@ export default function AWSDevOps() {
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <button onClick={() => router.push('/')} className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium">
+          <button onClick={() => router.push(&apos;/&apos;)} className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/></svg>
             Back to Home
           </button>
@@ -62,7 +63,7 @@ export default function AWSDevOps() {
             <a href="tel:+919885543638" className="hidden sm:flex items-center gap-2 text-gray-600 hover:text-green-600 text-sm font-medium transition-colors">
               <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
               +91 98855 43638
-            </a>
+            </Link>
             <button onClick={() => setEnrollmentModal(true)} className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg font-semibold text-sm transition-colors">Enroll Now</button>
           </div>
         </div>
@@ -80,7 +81,7 @@ export default function AWSDevOps() {
               <span className="text-purple-400">Online Training in Hyderabad</span>
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed mb-8" itemProp="description">
-              DevOps is the most in-demand skill in Hyderabad's tech market right now. Every company — from Amazon's development centre in Hyderabad to the hundreds of startups in Gachibowli — is hiring. This course, taught in Ameerpet, gets you interview-ready in 3 months.
+              DevOps is the most in-demand skill in Hyderabad&apos;s tech market right now. Every company — from Amazon&apos;s development centre in Hyderabad to the hundreds of startups in Gachibowli — is hiring. This course, taught in Ameerpet, gets you interview-ready in 3 months.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <button onClick={() => setEnrollmentModal(true)} className="bg-purple-600 hover:bg-purple-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl">
@@ -109,10 +110,10 @@ export default function AWSDevOps() {
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 mb-4">What This Course Covers</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                This course is built around what Hyderabad companies actually test in DevOps interviews — not just theory. You'll learn the AWS DevOps toolchain from scratch: CodePipeline, CodeBuild, CodeDeploy, ECS, EKS, Terraform, and more.
+                This course is built around what Hyderabad companies actually test in DevOps interviews — not just theory. You&apos;ll learn the AWS DevOps toolchain from scratch: CodePipeline, CodeBuild, CodeDeploy, ECS, EKS, Terraform, and more.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We've placed 3,500+ DevOps engineers from our Ameerpet centre. The curriculum is updated every quarter based on what our placed students tell us interviewers are asking.
+                We&apos;ve placed 3,500+ DevOps engineers from our Ameerpet centre. The curriculum is updated every quarter based on what our placed students tell us interviewers are asking.
               </p>
               <div className="space-y-3">
                 {['Build CI/CD pipelines with AWS CodePipeline', 'Master Docker and Kubernetes on EKS', 'Automate infrastructure with Terraform and CloudFormation', 'Deploy applications using Blue/Green and Canary strategies', 'Monitor systems with CloudWatch, X-Ray, and ELK', 'Secure pipelines with DevSecOps practices', 'Work with microservices and serverless architectures', 'Prepare for AWS DevOps Engineer Professional certification'].map((item, i) => (
@@ -239,7 +240,7 @@ export default function AWSDevOps() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">From Our Blog</h2>
-            <p className="text-gray-500 text-lg">Practical insights on AWS DevOps, Hyderabad's job market, and career transitions.</p>
+            <p className="text-gray-500 text-lg">Practical insights on AWS DevOps, Hyderabad&apos;s job market, and career transitions.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {BLOGS.map((b, i) => (
@@ -273,7 +274,7 @@ export default function AWSDevOps() {
       <footer className="bg-gray-900 text-gray-400 py-8 px-4 text-center">
         <p className="text-sm">© 2026 AWS DevOps Training Academy Hyderabad. All rights reserved.</p>
         <p className="text-xs text-gray-600 mt-2">
-          <a href="/" className="hover:text-gray-400 transition-colors">Home</a> · <a href="/courses/aws-data-engineering-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS Data Engineering</a> · <a href="/courses/aws-cloud-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS Cloud</a>
+          <Link href="/" className="hover:text-gray-400 transition-colors">Home</a> · <a href="/courses/aws-data-engineering-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS Data Engineering</a> · <a href="/courses/aws-cloud-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS Cloud</a>
         </p>
       </footer>
 
