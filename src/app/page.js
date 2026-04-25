@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 import EnrollmentModal from '../components/EnrollmentModal';
 import CoursesModal from '../components/CoursesModal';
@@ -105,7 +106,7 @@ export default function Home() {
             <span className="text-cyan-400">in Hyderabad</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            We've trained 5,000+ students from Hyderabad — freshers and working professionals — and placed them in TCS, Infosys, Wipro, Accenture, and 45+ other companies. Our trainers have worked in the industry, not just studied it.
+            We&apos;ve trained 5,000+ students from Hyderabad — freshers and working professionals — and placed them in TCS, Infosys, Wipro, Accenture, and 45+ other companies. Our trainers have worked in the industry, not just studied it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button onClick={() => handleEnrollment()} className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-blue-900/50">Join Next Batch →</button>
@@ -168,7 +169,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Why Students Choose Us</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">We're not the only AWS institute in Hyderabad. Here's why 5,000+ students picked us anyway.</p>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">We&apos;re not the only AWS institute in Hyderabad. Here&apos;s why 5,000+ students picked us anyway.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -194,7 +195,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Our Students Work At</h2>
-            <p className="text-gray-400 text-lg">5,000+ students placed across India's top IT companies and MNCs</p>
+            <p className="text-gray-400 text-lg">5,000+ students placed across India&apos;s top IT companies and MNCs</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {COMPANIES.map((company, i) => (
@@ -318,7 +319,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Send us a message</h3>
-              <p className="text-gray-500 text-sm mb-6">Fill this out and we'll reply on WhatsApp within minutes.</p>
+              <p className="text-gray-500 text-sm mb-6">Fill this out and we&apos;ll reply on WhatsApp within minutes.</p>
               <form className="space-y-4" onSubmit={(e) => {
                 e.preventDefault();
                 const fd = new FormData(e.target);
@@ -382,7 +383,7 @@ export default function Home() {
                   <div className="text-blue-400 text-xs">Academy Hyderabad</div>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed">Hyderabad's trusted AWS training institute. 5,000+ students trained and placed since 2019.</p>
+              <p className="text-sm leading-relaxed">Hyderabad&apos;s trusted AWS training institute. 5,000+ students trained and placed since 2019.</p>
             </div>
             <div>
               <h4 className="text-white font-semibold mb-3 text-sm">Our Courses</h4>
@@ -434,7 +435,7 @@ export default function Home() {
               </button>
             </div>
             <p className="text-blue-600 font-semibold mb-1 text-sm">{selectedCourse}</p>
-            <p className="text-gray-500 text-sm mb-6">Fill this out and we'll send you the full curriculum, batch schedule, and fee details.</p>
+            <p className="text-gray-500 text-sm mb-6">Fill this out and we&apos;ll send you the full curriculum, batch schedule, and fee details.</p>
             <form onSubmit={async (e) => {
               e.preventDefault();
               const fd = new FormData(e.target);
