@@ -1,5 +1,5 @@
 export async function GET() {
-  const baseUrl = 'https://awsdevopstraininghyderabad.com';
+  const baseUrl = 'https://www.awsdevopstraininginhyderabad.com';
   
   const routes = [
     '',
