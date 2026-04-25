@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import EnrollmentModal from '@/components/EnrollmentModal';
 import CourseStructuredData from '@/components/CourseStructuredData';
 import { getCourseBySlug } from '@/lib/staticCourseData';
@@ -54,7 +55,7 @@ export default function AWSCloud() {
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <button onClick={() => router.push('/')} className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium">
+          <button onClick={() => router.push(&apos;/&apos;)} className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/></svg>
             Back to Home
           </button>
@@ -62,7 +63,7 @@ export default function AWSCloud() {
             <a href="tel:+919885543638" className="hidden sm:flex items-center gap-2 text-gray-600 hover:text-green-600 text-sm font-medium transition-colors">
               <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
               +91 98855 43638
-            </a>
+            </Link>
             <button onClick={() => setEnrollmentModal(true)} className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold text-sm transition-colors">Enroll Now</button>
           </div>
         </div>
@@ -109,10 +110,10 @@ export default function AWSCloud() {
             <div>
               <h2 className="text-3xl font-extrabold text-gray-900 mb-4">What This Course Covers</h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We designed this course for people who are new to cloud — whether you're a fresher, a developer looking to add cloud skills, or someone switching careers. You don't need a deep technical background to start.
+                We designed this course for people who are new to cloud — whether you&apos;re a fresher, a developer looking to add cloud skills, or someone switching careers. You don&apos;t need a deep technical background to start.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                By the end, you'll understand AWS architecture well enough to design, deploy, and manage cloud infrastructure — and you'll be ready to sit the Solutions Architect Associate exam.
+                By the end, you&apos;ll understand AWS architecture well enough to design, deploy, and manage cloud infrastructure — and you&apos;ll be ready to sit the Solutions Architect Associate exam.
               </p>
               <div className="space-y-3">
                 {['Set up and manage AWS accounts and IAM', 'Launch and configure EC2 instances', 'Design secure VPC architectures', 'Work with S3, EBS, and EFS storage', 'Deploy RDS databases and DynamoDB', 'Configure CloudFront and Route 53', 'Monitor with CloudWatch and CloudTrail', 'Prepare for AWS Solutions Architect Associate certification'].map((item, i) => (
@@ -158,7 +159,7 @@ export default function AWSCloud() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Course Curriculum</h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">8 modules covering all core AWS services. Beginner friendly, but thorough enough to get you job-ready in Hyderabad's cloud market.</p>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">8 modules covering all core AWS services. Beginner friendly, but thorough enough to get you job-ready in Hyderabad&apos;s cloud market.</p>
           </div>
           <div className="max-w-3xl mx-auto space-y-3">
             {CURRICULUM.map((item, i) => (
@@ -273,7 +274,7 @@ export default function AWSCloud() {
       <footer className="bg-gray-900 text-gray-400 py-8 px-4 text-center">
         <p className="text-sm">© 2026 AWS DevOps Training Academy Hyderabad. All rights reserved.</p>
         <p className="text-xs text-gray-600 mt-2">
-          <a href="/" className="hover:text-gray-400 transition-colors">Home</a> · <a href="/courses/aws-devops-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS DevOps</a> · <a href="/courses/aws-data-engineering-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS Data Engineering</a>
+          <Link href="/" className="hover:text-gray-400 transition-colors">Home</a> · <a href="/courses/aws-devops-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS DevOps</a> · <a href="/courses/aws-data-engineering-online-training-in-hyderabad" className="hover:text-gray-400 transition-colors">AWS Data Engineering</a>
         </p>
       </footer>
 
