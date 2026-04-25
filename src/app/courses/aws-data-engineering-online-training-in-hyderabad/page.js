@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import emailjs from '@emailjs/browser';
-import EnrollmentModal from '../components/EnrollmentModal';
-import CoursesModal from '../components/CoursesModal';
-import BrochureModal from '../components/BrochureModal';
-import LocalBusinessSchema from '../components/LocalBusinessSchema';
-import CourseStructuredData from '../components/CourseStructuredData';
+import EnrollmentModal from '@/components/EnrollmentModal';
+import CoursesModal from '@/components/CoursesModal';
+import BrochureModal from '@/components/BrochureModal';
+import LocalBusinessSchema from '@/components/LocalBusinessSchema';
+import CourseStructuredData from '@/components/CourseStructuredData';
 import { getAllCourses } from '@/lib/staticCourseData';
 
 const COMPANIES = [
