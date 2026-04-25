@@ -47,6 +47,14 @@ export default function Home() {
     try { setCourses(getAllCourses()); } catch (e) { setCourses([]); }
   }, []);
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { if (document.body.contains(script)) document.body.removeChild(script); };
+  }, []);
+
   const handleEnrollment = (courseName = '') => { setSelectedCourse(courseName); setCoursesModal(false); setEnrollmentModal(true); };
   const handleLearnMore = (courseName, courseSlug) => { setSelectedCourse(courseName); if (courseSlug) setPendingCourseRoute(`/courses/${courseSlug}`); setCourseAccessModal(true); };
 
@@ -208,6 +216,26 @@ export default function Home() {
                 <div className="text-blue-100 text-sm mt-2">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GOOGLE REVIEWS */}
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">What Our Students Say</h2>
+            <p className="text-gray-500 text-lg">Real reviews from students who trained with us in Ameerpet, Hyderabad.</p>
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex text-yellow-400">
+                {'★★★★★'.split('').map((s, i) => <span key={i} className="text-2xl">★</span>)}
+              </div>
+              <span className="text-gray-600 font-semibold">4.9 / 5 on Google</span>
+            </div>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            
+            <div className="elfsight-app-6d80956e-8ad0-41ad-8330-ec91a4114c76" data-elfsight-app-lazy></div>
           </div>
         </div>
       </section>
