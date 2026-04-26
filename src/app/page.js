@@ -132,7 +132,8 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {courses.slice(0, 3).map((course) => {
-              const s = courseStyles[course.slug?.current] || { accent: '#6b7280', light: '#f9fafb', border: '#e5e7eb', icon: '🎓', badge: 'New', students: 'New Course' };
+              const slugKey = course.slug?.current || course.slug || '';
+const s = courseStyles[slugKey] || { accent: '#6b7280', light: '#f9fafb', border: '#e5e7eb', icon: '🎓', badge: 'New', students: 'New Course', image: null, imageAlt: '' };
               return (
                 <div key={course._id} className="bg-white rounded-2xl border-2 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" style={{ borderColor: s.border }} itemScope itemType="https://schema.org/Course">
                   <div className="h-2 w-full" style={{ backgroundColor: s.accent }} />
