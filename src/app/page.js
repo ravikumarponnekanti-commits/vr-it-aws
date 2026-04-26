@@ -99,11 +99,11 @@ export default function Home() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 text-blue-300 text-sm font-medium mb-6">
-            📍 Ameerpet, Hyderabad — Near Satyam Theatre
+            📍 Ameerpet, Hyderabad — Beside Ameerpet Metro Station
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            Learn <span className="text-blue-400">AWS Cloud</span> &amp; DevOps<br/>
-            <span className="text-cyan-400">in Hyderabad</span>
+            Learn <span className="text-yellow-400">AWS Cloud</span> &amp; DevOps<br/>
+            <span className="text-yellow-300">in Hyderabad</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
             We&apos;ve trained 5,000+ students from Hyderabad — freshers and working professionals — and placed them in TCS, Infosys, Wipro, Accenture, and 45+ other companies. Our trainers have worked in the industry, not just studied it.
@@ -132,8 +132,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {courses.slice(0, 3).map((course) => {
-              const slugKey = course.slug?.current || course.slug || '';
-const s = courseStyles[slugKey] || { accent: '#6b7280', light: '#f9fafb', border: '#e5e7eb', icon: '🎓', badge: 'New', students: 'New Course', image: null, imageAlt: '' };
+              const s = courseStyles[course.slug?.current] || { accent: '#6b7280', light: '#f9fafb', border: '#e5e7eb', icon: '🎓', badge: 'New', students: 'New Course' };
               return (
                 <div key={course._id} className="bg-white rounded-2xl border-2 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" style={{ borderColor: s.border }} itemScope itemType="https://schema.org/Course">
                   <div className="h-2 w-full" style={{ backgroundColor: s.accent }} />
@@ -410,7 +409,7 @@ const s = courseStyles[slugKey] || { accent: '#6b7280', light: '#f9fafb', border
           </div>
           <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
             <p className="text-sm">© 2026 AWS DevOps Training Academy Hyderabad. All rights reserved.</p>
-            <p className="text-xs text-gray-600">Designed by <a href="https://www.linkedin.com/in/venkatalokesh" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">Devotree</a></p>
+            
           </div>
         </div>
       </footer>
