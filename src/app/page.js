@@ -27,9 +27,9 @@ const FAQS = [
 ];
 
 const courseStyles = {
-  'aws-cloud-online-training-in-hyderabad': { accent: '#3b82f6', light: '#eff6ff', border: '#bfdbfe', icon: '☁️', badge: 'Most Popular', students: '1,000+ Trained' },
-  'aws-devops-online-training-in-hyderabad': { accent: '#8b5cf6', light: '#f5f3ff', border: '#ddd6fe', icon: '⚙️', badge: 'High Demand', students: '3,500+ Trained' },
-  'aws-data-engineering-online-training-in-hyderabad': { accent: '#ec4899', light: '#fdf2f8', border: '#fbcfe8', icon: '📊', badge: 'Highest Salary', students: '500+ Trained' }
+  'aws-cloud-online-training-in-hyderabad': { accent: '#3b82f6', light: '#eff6ff', border: '#bfdbfe', icon: '☁️', badge: 'Most Popular', students: '1,000+ Trained', image: '/aws-cloud-training-hyderabad.webp', imageAlt: 'AWS Cloud Training in Hyderabad Ameerpet' },
+  'aws-devops-online-training-in-hyderabad': { accent: '#8b5cf6', light: '#f5f3ff', border: '#ddd6fe', icon: '⚙️', badge: 'High Demand', students: '3,500+ Trained', image: '/aws-devops-training-hyderabad-ameerpet.jpg', imageAlt: 'AWS DevOps Training in Hyderabad Ameerpet' },
+  'aws-data-engineering-online-training-in-hyderabad': { accent: '#ec4899', light: '#fdf2f8', border: '#fbcfe8', icon: '📊', badge: 'Highest Salary', students: '500+ Trained', image: '/aws-data-engineering-training-hyderabad.png', imageAlt: 'AWS Data Engineering Training in Hyderabad' }
 };
 
 export default function Home() {
@@ -99,7 +99,7 @@ export default function Home() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 text-blue-300 text-sm font-medium mb-6">
-            📍 Ameerpet, Hyderabad — Beside Metro station
+            📍 Ameerpet, Hyderabad — Near Satyam Theatre
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             Learn <span className="text-blue-400">AWS Cloud</span> &amp; DevOps<br/>
@@ -136,6 +136,11 @@ export default function Home() {
               return (
                 <div key={course._id} className="bg-white rounded-2xl border-2 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" style={{ borderColor: s.border }} itemScope itemType="https://schema.org/Course">
                   <div className="h-2 w-full" style={{ backgroundColor: s.accent }} />
+                  {s.image && (
+                    <div className="w-full h-44 overflow-hidden">
+                      <img src={s.image} alt={s.imageAlt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    </div>
+                  )}
                   <div className="p-7 flex flex-col flex-1">
                     <div className="flex items-start justify-between mb-4">
                       <div className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl" style={{ backgroundColor: s.light }}>{s.icon}</div>
