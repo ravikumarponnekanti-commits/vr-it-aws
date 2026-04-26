@@ -68,7 +68,7 @@ export default function AWSDataEngineering() {
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <button onClick={() => router.push(&apos;/&apos;)} className="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition-colors text-sm font-medium">
+          <button onClick={() => router.push('/')} className="flex items-center gap-2 text-gray-600 hover:text-pink-600 transition-colors text-sm font-medium">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/></svg>
             Back to Home
           </button>
