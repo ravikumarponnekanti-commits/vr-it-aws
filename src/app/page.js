@@ -99,7 +99,7 @@ export default function Home() {
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 rounded-full px-4 py-1.5 text-blue-300 text-sm font-medium mb-6">
-            📍 Ameerpet, Hyderabad — Near Satyam Theatre
+            📍 Ameerpet, Hyderabad — Beside Metro station
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             Learn <span className="text-blue-400">AWS Cloud</span> &amp; DevOps<br/>
